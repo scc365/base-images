@@ -1,4 +1,5 @@
-# Base Images
+# Base Images    ![GitHub Tag](https://img.shields.io/github/v/tag/scc365/base-images?display_name=tag&label=%20&sort=semver) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/scc365/base-images/release.yml)
+
 
 To complete SCC365 tasks, you will need to use a set of tools you are unlikely
 to have installed on your own devices already. Provided you are using a
