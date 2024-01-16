@@ -60,6 +60,7 @@ RUN apt-get update -q && \
   openvswitch-testcontroller \
   python3 \
   python3-bottle \
+  python3-flask \
   python3-pip \
   python3-setuptools \
   telnet \
