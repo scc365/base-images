@@ -24,11 +24,18 @@ function stop_openvswitch_service {
     becho "*** OpenvSwitch service stopped ✅"
 }
 
+function clean_mininet {
+    becho "*** Cleaning mininet network configuration..."
+    mn -c > /dev/null 2>&1
+    becho "*** Mininet network configuration cleaned ✅"
+}
+
+trap "clean_mininet" EXIT
 if ! start_openvswitch_service; then
     becho "*** Failed to start OpenvSwitch service ❌"
     exit 1
 else
-    trap "stop_openvswitch_service" EXIT
+    trap "clean_mininet && stop_openvswitch_service" EXIT
 fi
 
 becho "|-- SCC365: Mininet Docker Image 🐳 --|"
